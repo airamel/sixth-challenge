@@ -83,5 +83,5 @@ $ npm start
 
 ## Contact
 
-- GitHub [@your-airamel](https://{github.com/airamel})
-- Twitter [@mel_dur](https://{twitter.com/mel_dur})
+- GitHub [@airamel](https://github.com/airamel)
+- Twitter [@mel_dur](https://twitter.com/mel_dur)
