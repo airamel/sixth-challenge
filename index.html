@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Montserrat"
+      rel="stylesheet"
+    />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <title>CheckOut</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="container-form">
+        <form>
+          <h1>Checkout</h1>
+          <h3>Contact information</h3>
+          <label for="email">E-mail</label>
+          <input type="email" name="email" id="email" placeholder="&#xe0be Enter your email..." required>
+          
+          <label for="phone">Phone</label>
+          <input type="tel" name="phone" id="phone" placeholder=" &#xe0cd Enter your phone..." required>
+          
+          <h3>Shipping address </h3>
+          
+          <label for="name">Full name</label>
+          <input type="text" name="name" id="name" placeholder="&#xe853 Rodney Cotton" required>
+
+          <label for="address">Address</label>
+          <input type="text" name="address" id="address" placeholder="&#xe88a Your address..." required>
+
+          <label for="city">City</label>
+          <input type="text" name="city" id="city" placeholder="&#xe7f1 Your city..." required>
+          <div class="form-row">
+            <div>
+              <label for="country">Country</label>
+          <select name="country" id="country">
+            <option value="con">&#xe80b; Your country</option>
+            <option value="mexico">Mexico</option>
+            <option value="colombia">Colombia</option>
+            <option value="austria">Austria</option>
+          </select>
+            </div>
+            <div>
+              <label for="postal-code">Postal Code</label>
+          <input type="number" name="postal-code" id="postal-code" placeholder="&#xe89b Your postal code..." required>
+            </div>
+          </div>
+
+          <input type="checkbox" name="save" id="save">
+          <label for="save">Save this information for next time</label>
+          <br>
+          <br>
+
+          <input type="submit" onclick="display_alert()" value="continue" id="boton">
+          <br>
+        </form>
+      </div>
+      <script>
+        function display_alert() {
+          var empty = "";
+          let email =document.getElementById("email").value;
+          let phone =document.getElementById("phone").value;
+          let name =document.getElementById("name").value;
+          let address =document.getElementById("address").value;
+          let city =document.getElementById("city").value;
+          if (empty == email || empty == phone || empty == name || empty == address || empty ==city){
+            alert("form incompleted");
+          } else {
+            alert("form completed");
+          }
+        }
+      </script>
+      <div class="container-shipping">
+          <div class="container-backpack">
+            <div class="container-img">
+              <img src="photo1.png" alt="" style="width: 100%; border-radius: 13px;">
+            </div>
+            <div class="container-backprice">
+                <h3>Vintage Backbag</h3>
+                <p class="p-price">$59.99 <span class="p-antprice">$94.99</span></p>
+                <div class="wrapper">
+                    <span class="min">-</span>
+                    <span class="num">1</span>
+                    <span class="may">+</span>
+                </div>
+            </div>
+          </div>
+          <div class="container-shoes">
+            <div class="container-img">
+              <img src="photo2.png" alt="" style="width: 100%; border-radius: 13px;">
+            </div>
+            <div class="container-shoesprice">
+                <h3>Levi Shoes</h3>
+                <p class="p-price">$74.99 <span class="p-antprice">$124.99</span></p>
+                <div class="wrapper">
+                    <span class="min">-</span>
+                    <span class="num">1</span>
+                    <span class="may">+</span>
+                </div>
+            </div>
+          </div>
+          <br><br>
+          <div class="price">
+            <p class="p-ship">Shipping <span class="total">$19</span></p>
+            <p class="p-ship">Total   <span class="total">$148.98</span></p>
+          </div>
+      </div>
+    </div>
+    <br>
+    <footer style="color: gray; text-align: center; font-family: 'Montserrat';">Created by <strong><a style="color: gray;" href="https://devchallenges.io/portfolio/airamel">airamel</a></strong> - devChallenges.io</footer>
+  </body>
+</html>
